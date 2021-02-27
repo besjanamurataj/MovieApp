@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <ng-container *ngIf="movie?.image; else newDeb">
+      <img
+        class="mt-5"
+        src="{{ movie.image.original }}"
+        alt="Card image cap"
+        height="500"
+      />
+    </ng-container>
+    <ng-template #newDeb>
+      <img
+        src="assets/image/image-not-found.jpg"
+        class="mt-5"
+        height="500"
+        width="280px"
+      />
+    </ng-template>
+    <div class="card mt-5" style="background-color: whitesmoke; width: 30rem">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie?.name }}</h5>
+        <h6 class="card-title">{{ movie?.type }}</h6>
+        <p class="card-text" [innerHTML]="movie?.summary">{{movie?.summary }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

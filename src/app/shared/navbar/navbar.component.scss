@@ -1,0 +1,32 @@
+nav{
+overflow: hidden;
+background-color: black;
+
+}
+
+nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: auto;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.sticky{
+position: fixed;
+top: 0%;
+height: 60px;
+z-index: 999;
+width: 100%;
+
+
+}
+
+nav a:hover
+{
+color: #039be5;
+}

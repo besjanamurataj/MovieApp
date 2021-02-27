@@ -1,0 +1,42 @@
+
+<div class="container mt-5">
+  <div class="row mt-5">
+    <div
+      class="col-md-3 mt-2 justify-content-center"
+      *ngFor="let movie of favoritesData"
+    >
+      <div class="card mt-5 video-thumbnail" style="width: 15rem">
+        <ng-container *ngIf="movie.show.image; else newDeb">
+          <img
+            class="card-img-top"
+            height="250"
+            src="{{ movie.show.image.original }}"
+          />
+          <span style="background-color: lightseagreen;width: 1.5rem;text-align: center;"class="rate">{{ movie.show.rating.average }}</span>
+          <i class="fa fa-star star" style="font-size: 25px"></i>
+        </ng-container>
+        <ng-template #newDeb>
+          <img
+            src="assets/image/image-not-found.jpg"
+            height="250"
+            width="240px"
+          />
+        </ng-template>
+        <div class="card-body" style="background-color: whitesmoke;height: 5rem">
+          <span class="float-right"
+            ><i
+              class="fa fa-trash"
+              style="font-size: 25px; color: red"
+              (click)="deleteMovie(movie)"
+            ></i
+          ></span>
+
+          <p class="card-title" style="font-weight: bold">
+            {{ movie.show.name }}({{ movie.show.premiered | date: "y" }})
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
