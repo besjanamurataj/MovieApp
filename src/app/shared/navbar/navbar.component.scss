@@ -1,6 +1,12 @@
 nav{
 overflow: hidden;
-background-color: black;
+background-color: rgb(129, 225, 241);
+position: fixed;
+top: 0%;
+height: 60px;
+z-index: 999;
+width: 100%;
+
 
 }
 
@@ -12,18 +18,6 @@ nav a {
   padding: 14px 16px;
   text-decoration: none;
   color: white;
-}
-
-
-
-.sticky{
-position: fixed;
-top: 0%;
-height: 60px;
-z-index: 999;
-width: 100%;
-
-
 }
 
 nav a:hover
